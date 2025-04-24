@@ -6,7 +6,7 @@ _Design heuristics for building trustworthy, human-centered interfaces in system
 
 ## 🌐 What is this?
 
-This is a living framework of 13 heuristics for designing agentic systems—tools and interfaces where users delegate tasks to AI agents that can act autonomously or semi-autonomously.
+This is a living framework of heuristics for designing agentic systems—tools and interfaces where users delegate tasks to AI agents that can act autonomously or semi-autonomously.
 
 As software shifts from passive interfaces to active collaborators, we need new UX principles to support delegation, transparency, explainability, and trust. This repo offers a structured set of rules, examples, and design implications for creating better human-agent interactions.
 
@@ -27,7 +27,8 @@ Why it matters: In traditional UX, we design flows. In agentic systems, users ca
 Design implications:
 - Start with what the user wants to achieve, not what they need to click through. Minimize or abstract the steps unless the user explicitly wants control.
 - Let users set intent (e.g., "Fix this bug") without walking them through every task. Offer override or review options only when needed.
-- Action: Ask, “What would the user delegate if they could wave a wand?”
+
+Action: Ask, “What would the user delegate if they could wave a wand?”
 
 🔍 Example: Linear for Agents
 Linear is exploring agent collaboration, enabling agents to be assigned to issues and suggest actions like PRs. The interface centers on outcomes, not steps.
@@ -38,7 +39,8 @@ Why it matters: Misunderstood intent can lead to incorrect or harmful outcomes.
 Design Implications:
 - Ask clarifying questions when user input is ambiguous.
 - Enable users to revise and clarify goals before action.
-- Action: Let users refine intent. Prompt if ambiguous.
+
+Action: Let users refine intent. Try designing the agent’s first response as a clarifying question.
 
 🔍 Example: Zapier Agents
 Zapier prompts for user goals. If unclear which tools to use, the agent asks follow-ups and pauses until clarified.
@@ -49,7 +51,8 @@ Why it matters: Transparency builds trust.
 Design Implications:
 - Visualize confidence levels through UI cues.
 - Offer fallback or escalation options when confidence is low.
-- Action: Surface confidence and fallback options.
+
+Action: Surface confidence and fallback options.
 
 🔍 Example: Fin by Intercom
 In customer support contexts, Fin signals when it’s unsure and escalates to human agents.
@@ -60,7 +63,8 @@ Why it matters: Trust depends on recoverability.
 Design Implications:
 - Integrate audit logs, previews, and undo states.
 - Show upcoming agent actions and allow cancellation.
-- Action: Build preview, undo, and rollback into flows.
+
+Action: Sketch the “oh no” moments. What would the user want to undo, or preview, and how?
 
 🔍 Example: Devin (Cognition)
 Devin previews diffs and lets users approve or reject changes before merging.
@@ -72,10 +76,10 @@ Design Implications:
 
 - Collect and surface feedback controls (e.g., thumbs up/down).
 - Reflect back how agent behavior changes as a result.
-- Action: Show changes based on feedback.
 
-🔍 Example: Replit Ghostwriter
-Ghostwriter improves suggestions based on your corrections and thumbs up/down feedback.
+Action: Show changes based on feedback.
+
+🔍 Example: Zapier AI AgentsZapier’s agents adjust how they build workflows based on user edits and confirmations. 
 
 ### 6. Design for adjustable autonomy (Adapted)
 Rule: Let users set and change how much control agents have.
@@ -87,7 +91,7 @@ Design Implications:
 Action: Offer control modes: "always ask", "ask once", or "auto".
 
 🔍 Example: Auto-Ordering Assistant (Fictional)
-Users toggle autonomy from suggest → approve → auto-submit. Autonomy level is visible and changeable.
+Users could toggle autonomy from suggest → approve → auto-submit. Autonomy level is visible and changeable at any point.
 
 ### 7. Use memory responsibly (New)
 Rule: Personalization should serve the task and not overreach into the user's data or behavior in unexpected ways.
@@ -122,6 +126,8 @@ Design Implications:
 - Visualize task sequences or show handoff chains when multiple agents are involved.
 - Log agent actions and decision points for transparency and troubleshooting.
 
+Action: Create a timeline of agent actions. Would a user know who did what, and when?
+
 🔍 Example: Devin (Cognition)
 Devin breaks tasks into subprocesses, like test runner, fix recommender, and code generator. Users can see each step, making the agent chain legible and auditable.
 
@@ -132,6 +138,8 @@ Design Implications:
 -Show previews or summaries before committing irreversible actions (e.g., send, deploy, delete).
 -Use plain language and editable fields where possible.
 -Consider offering a “preview mode” for more complex operations.
+
+Action: What’s the last safe moment in your flow? 
 
 🔍 Example: Linear for Agents
 Before taking action (like opening a PR), Linear agents display a diff preview—giving users a clear, editable summary of what’s about to happen.
@@ -144,6 +152,8 @@ Design Implications:
 -Align tone and authority level with the agent’s actual capabilities and scope.
 -Reaffirm the agent’s role through its responses, UI framing, and fallback behavior.
 
+Action: Align tone and authority level with the agent’s actual capabilities and scope.
+
 🔍 Example: Fin by Intercom
 Fin presents itself as a helpful support assistant. Not an all-knowing agent. Its scope is clearly framed, and its tone remains helpful throughout.
 
@@ -154,6 +164,8 @@ Design Implications:
 - Create onboarding flows that clearly explain the agent’s purpose, strengths, and limitations.
 - Use examples and walkthroughs to show ideal tasks and interactions.
 - Reaffirm these capabilities later—through tooltips, sidebars, or inline suggestions.
+
+Action: Draft your agent’s first day. What would it show and say? 
 
 🔍 Example: Zapier Agents
 Zapier guides users through setting up each agent, clarifying the goals, connected tools, and what the agent is expected to handle, just like helping setup a new design hire on their first project.
@@ -166,6 +178,8 @@ Design Implications:
 - Let users set optimization goals (e.g., speed vs quality, cost vs durability).
 - Expose tradeoffs and alternatives when relevant, especially for a high-impact action.
 
+Action: Highlight a moment where tradeoffs exist. Could the interface show why it chose this path? 
+
 🔍 Example: Devin (Cognition)
 When Devin selects a fix, it explains: “I chose this solution because it runs faster and fits your existing architecture.” This helps users understand the logic, and make adjustments if needed.
 
@@ -173,10 +187,10 @@ When Devin selects a fix, it explains: “I chose this solution because it runs 
 
 ## 🧠 Why This Matters
 
-Agentic systems are no longer speculative—they're already here. If we don’t design intentional patterns around delegation, memory, and autonomy, the market will define them by accident.
+Agentic systems are no longer speculative. They're already here. If we don’t design intentional patterns around delegation, memory, and autonomy, the market will define them by accident.
 
 This framework helps teams build systems that users can:
-- Confidently **delegate** to
+- Confidently **delegate** and **collaborate** with
 - Clearly **understand**
 - And meaningfully **stay in the loop** with
 
@@ -184,7 +198,7 @@ This framework helps teams build systems that users can:
 
 ## 🛠 Who This Is For
 
-- Product & UX designers building AI-driven tools
+- Product builders making AI-driven tools
 - PMs and founders designing agent-powered workflows
 - Researchers exploring the future of human-agent collaboration
 
@@ -202,7 +216,8 @@ Open an issue to suggest a new heuristic, submit a pull request with edits, or j
 
 Inspired by work from:
 - [Tina He – The Race to Redesign Everything for Agents](https://every.to/thesis/the-race-is-on-to-redesign-everything-for-ai-agents)
-- [Mathias Biilmann – Agent Experience](https://agentexperience.ax)
+- [Matthias Biilmann - Introducing AX: Why Agent Experience Matters ] (https://biilmann.blog/articles/introducing-ax/)
+- [Agent Experience](https://agentexperience.ax)
 - Zapier, Linear, Intercom, Cognition, Replit, and others building at the frontier
 
 ---
