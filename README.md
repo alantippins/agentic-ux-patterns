@@ -30,7 +30,7 @@ Design implications:
 - Action: Ask, “What would the user delegate if they could wave a wand?”
 
 🔍 Example: Linear for Agents
-Agents are treated like collaborators and can be assigned to issues, commenting, and submitting pull requests. The interface centers on outcomes, not steps.
+Linear is exploring agent collaboration, enabling agents to be assigned to issues and suggest actions like PRs. The interface centers on outcomes, not steps.
 
 ### 2. Clarify intent before acting (Adapted)
 Rule: Agents need enough context to understand what the user means before acting.
@@ -52,7 +52,7 @@ Design Implications:
 - Action: Surface confidence and fallback options.
 
 🔍 Example: Fin by Intercom
-Fin shows when it’s unsure and escalates to humans.
+In customer support contexts, Fin signals when it’s unsure and escalates to human agents.
 
 ### 4. Always provide a way to undo (Adapted)
 Rule: Users must be able to inspect, reverse, or stop agent actions.
